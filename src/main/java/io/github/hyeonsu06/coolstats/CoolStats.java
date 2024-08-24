@@ -10,7 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class CoolStats extends JavaPlugin {
 
-    public static final JavaPlugin plugin = this;
+    public JavaPlugin plugin = this;
 
     @Override
     public void onEnable() {

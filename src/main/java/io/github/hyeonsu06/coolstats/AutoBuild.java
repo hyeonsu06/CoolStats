@@ -44,7 +44,7 @@ public class AutoBuild extends Command implements CommandExecutor {
                     public void run() {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "reload confirm");
                     }
-                }.runTask(CoolStats.plugin);
+                }.runTask(CoolStats.getPlugin(CoolStats.class));
             }
         }.start();
         return true;
