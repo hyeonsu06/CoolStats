@@ -1,0 +1,9 @@
+{
+  "voidgloom_seraph_t4": {
+    "name": "Voidgloom Seraph",
+    "max_health": 210000000,
+    "damage": 1250,
+    "defense": 100,
+    "speed": 200
+  }
+}

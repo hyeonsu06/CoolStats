@@ -1,0 +1,22 @@
+{
+  "diamond_sword": {
+    "name": "Diamond Sword",
+    "material": "diamond_sword",
+    "rarity": 1,
+    "damage": 35
+  },
+
+  "test_item": {
+    "name": "Test Item",
+    "material": "iron_hoe",
+    "rarity": 1,
+    "damage": 1000,
+    "strength": 1000,
+    "defense": 1000,
+    "max_mana": 1000,
+    "health": 1000,
+    "speed": 300,
+    "ferocity": 1000,
+    "regen": 1000
+  }
+}
