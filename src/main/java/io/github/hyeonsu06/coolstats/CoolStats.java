@@ -10,7 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class CoolStats extends JavaPlugin {
 
-    public final Plugin plugin = this;
+    public static final JavaPlugin plugin = this;
 
     @Override
     public void onEnable() {
@@ -22,6 +22,7 @@ public final class CoolStats extends JavaPlugin {
             }
         }
 
+        plugin.getCommand("autobuild").setExecutor(new AutoBuild());
         new TickLoop().runTaskTimer(plugin, 0, 1);
     }
 

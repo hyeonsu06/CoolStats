@@ -20,7 +20,6 @@ public class EntityEventListener implements Listener {
 
         CustomEntityData customData = dataHolder.getEntityData(entity);
         if (customData != null) {
-            JSONObject
         }
     }
 }
