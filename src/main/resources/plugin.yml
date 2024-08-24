@@ -3,3 +3,9 @@ version: '${project.version}'
 main: io.github.hyeonsu06.coolstats.CoolStats
 api-version: '1.20'
 load: STARTUP
+commands:
+  autobuild:
+    usage: "/autobuild"
+    description: "Auto-builds your plugin"
+    permission: op
+    permission-message: "Don't do that!"
