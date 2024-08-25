@@ -8,4 +8,22 @@ commands:
     usage: "/autobuild"
     description: "Auto-builds your plugin"
     permission: op
-    permission-message: "Don't do that!"
+    permission-message: "You cannot use this command unless you're op."
+
+  getentitydata:
+    usage: "/getentitydata <distance> <key>"
+    description: "Get custom data of nearest entity."
+    permission: op
+    permission-message: "You cannot use this command unless you're op."
+
+  setentitydata:
+    usage: "/setentitydata <distance> <key>"
+    description: "Set custom data of nearest entity."
+    permission: op
+    permission-message: "You cannot use this command unless you're op."
+
+  removeentitydata:
+    usage: "/removeentitydata <distance> <key>"
+    description: "Remove custom data of nearest entity."
+    permission: op
+    permission-message: "You cannot use this command unless you're op."

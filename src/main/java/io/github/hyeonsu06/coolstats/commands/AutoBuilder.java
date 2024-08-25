@@ -1,5 +1,6 @@
-package io.github.hyeonsu06.coolstats;
+package io.github.hyeonsu06.coolstats.commands;
 
+import io.github.hyeonsu06.coolstats.CoolStats;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -11,9 +12,9 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-public class AutoBuild extends Command implements CommandExecutor {
+public class AutoBuilder extends Command implements CommandExecutor {
 
-    public AutoBuild() {
+    public AutoBuilder() {
         super("autobuild", "Renews plugin automatically.", "autobuild", List.of("recompile"));
     }
 
@@ -24,18 +25,19 @@ public class AutoBuild extends Command implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        new Thread("AutoBuild") {
+        new Thread("AutoBuilder") {
             @Override
             public void run() {
                 try {
                     Process process = Runtime.getRuntime().exec("./reload-server.sh");
                     Scanner scanner = new Scanner(process.getInputStream());
                     while(process.isAlive()) {
-                        String st = "[AutoBuild] " + scanner.nextLine();
+                        String st = "[AutoBuilder] " + scanner.nextLine();
                         System.out.println(st);
                     }
                 } catch (IOException e) {
                     Bukkit.getLogger().warning(e.getMessage());
+                    Bukkit.getOnlinePlayers().forEach(player -> player.sendMessage(e.getMessage()));
                     return;
                 } catch (NoSuchElementException ignored) {
                 }

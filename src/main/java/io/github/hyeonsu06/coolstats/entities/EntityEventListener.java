@@ -4,7 +4,6 @@ import org.bukkit.entity.Entity;
 import org.bukkit.event.Listener;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.json.simple.JSONObject;
 
 public class EntityEventListener implements Listener {
 
@@ -20,6 +19,7 @@ public class EntityEventListener implements Listener {
 
         CustomEntityData customData = dataHolder.getEntityData(entity);
         if (customData != null) {
+            //things
         }
     }
 }

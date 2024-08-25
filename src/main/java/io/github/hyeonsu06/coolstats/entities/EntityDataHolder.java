@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-import static io.github.hyeonsu06.coolstats.Variables.dataFolder;
+import static io.github.hyeonsu06.coolstats.Utilities.Variables.dataFolder;
 
 public class EntityDataHolder {
 
@@ -47,7 +47,7 @@ public class EntityDataHolder {
     }
 
     // Save data to a file
-    private void saveEntityDataToFile(Entity entity, CustomEntityData data) {
+    public void saveEntityDataToFile(Entity entity, CustomEntityData data) {
         File file = new File(dataFolder, entity.getUniqueId().toString());
         try (PrintWriter writer = new PrintWriter(new FileWriter(file))) {
             writer.print(data.toString());
